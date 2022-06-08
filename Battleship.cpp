@@ -6,9 +6,9 @@ int main()
     SetConsoleOutputCP(1251);
     srand((unsigned)time(NULL));
 
-    Game a;
-    a.fill_board();
-    a.print_board();
-    a.game();
+    Game play;
+    play.fill_board();
+    play.print_board();
+    play.game();
     return 0;
 }
