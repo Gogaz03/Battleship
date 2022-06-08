@@ -7,6 +7,8 @@
 #include <mmsystem.h>
 #include "Board.h"
 
+using namespace std;
+
 class Game : public Board
 {
 public:
