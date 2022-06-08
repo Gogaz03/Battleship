@@ -4,11 +4,13 @@ void Game::game()
 {
         int score = 0;
         string F = " АБВГДЕЖЗИК";
-        int stolb;
+        string stolb;
         string stroka;
-        int znachstr = 0;
-        stolb = 1;
-        while (stolb != 0)
+        stroka = "1";
+        stolb = "1";
+        int znachstr;
+        int znachstlb;
+        while (stolb != "0")
 
         {
             if (score == 20) {
@@ -50,15 +52,45 @@ void Game::game()
                 }
                 cout << "Столбец: ";
                 cin >> stolb;
-                if (board1[znachstr][stolb] == '#') {
-                    score += 1;
-                    board2[znachstr][stolb] = 'x';
+                if (stolb == "1") {
+                    znachstlb = 1;
                 }
-                else if (board1[znachstr][stolb] == 'x') {
-                    board2[znachstr][stolb] = 'x';
+                else if (stolb == "2") {
+                    znachstlb = 2;
+                }
+                else if (stolb == "3") {
+                    znachstlb = 3;
+                }
+                else if (stolb == "4") {
+                    znachstlb = 4;
+                }
+                else if (stolb == "5") {
+                    znachstlb = 5;
+                }
+                else if (stolb == "6") {
+                    znachstlb = 6;
+                }
+                else if (stolb == "7") {
+                    znachstlb = 7;
+                }
+                else if (stolb == "8") {
+                    znachstlb = 8;
+                }
+                else if (stolb == "9") {
+                    znachstlb = 9;
+                }
+                else if (stolb == "10") {
+                    znachstlb = 10;
+                }
+                if (board1[znachstr][znachstlb] == '#') {
+                    score += 1;
+                    board2[znachstr][znachstlb] = 'x';
+                }
+                else if (board1[znachstr][znachstlb] == 'x') {
+                    board2[znachstr][znachstlb] = 'x';
                 }
                 else {
-                    board2[znachstr][stolb] = '*';
+                    board2[znachstr][znachstlb] = '*';
                 }
                 system("cls");
                 cout << "  1 2 3 4 5 6 7 8 9 10" << endl;
@@ -74,3 +106,4 @@ void Game::game()
             }
         }
 }
+
