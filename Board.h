@@ -8,14 +8,15 @@
 
 using namespace std;
 
+
+
 class Board
 {
-	char board1[10][10];
-	char board2[10][10];
 public:
 	void fill_board();
 	void print_board();
-	void game();
+	char board1[10][10];
+	char board2[10][10];
 };
 
 #endif 
